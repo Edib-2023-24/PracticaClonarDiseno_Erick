@@ -3,17 +3,68 @@
 @import url(reset.css);
 
 /* *********************************** */
-/* *** ESTILOS GENERALES *** */
+/* ***         VARIABLES         *** */
 /* *********************************** */
-
-/* Tipografía */
-@font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
-}
-
-/* ******************************** */
 
 /* Colores */
 
 /* ******************************** */
+:root {
+  /* colors */
+  --blanco: #fdfeff;
+  --violeta-claro: #d191da;
+  --violeta-medio: #b55bc2;
+  --violeta-oscuro: #082669;
+  --violeta-rojizo: #e12c84;
+
+  /* Tamaños */
+  --tam-anchoMaximo: 1640px;
+
+  --tipo-parrafo: 1rem;
+  --tipo-subtitulo: 1.5rem;
+  --tipo-links: 1.125rem;
+}
+/* Tipografía */
+@font-face {
+  font-family: "mayberry";
+  src: url("../font/Mayberry\ W02\ Bold.woff2") format("woff2"),
+    url("../font/Mayberry\ W02\ Bold.woff") format("woff");
+}
+
+/* *********************************** */
+/* *** ESTILOS GENERALES *** */
+/* *********************************** */
+
+html {
+  font-family: "mayberry", sans-serif;
+  font-size: 16px;
+  color: var(--violeta-claro);
+}
+header {
+  background-color: var(--violeta-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  & nav {
+    width: 100%;
+    max-width: 1640px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    & .header__link-logo {
+      flex-grow: 1;
+    }
+    & .header__boton-empezar {
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: var(--blanco);
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
+
